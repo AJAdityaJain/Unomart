@@ -1,0 +1,74 @@
+<div id="Cart" *ngIf="items.length >0">
+        <div id="Side">
+            <div id="top">
+                <p id="Title">My Cart</p>            
+                <div id="receipt">
+                    <div>
+                        <p>Items</p><p>{{itemsNum}}</p>
+                    </div>
+                    <br>
+                    <div>
+                        <p>MRP</p><p>{{symbol}} {{MRP}}</p>
+                    </div>
+                    <div>
+                        <p>Delivery</p><p>{{symbol}} {{deliveryCharge}}</p>
+                    </div>
+                    <div>
+                        <p>Discount</p><p>{{discount*100}}%</p>
+                    </div>
+                    <div id="bold">
+                        <p>Grand Total</p><p>{{symbol}} {{Grand}}</p>
+                    </div>
+                </div>
+                <br>
+                <p id="Text">Coupon Code</p>            
+                <input type="text" (change)="checkCoupon($event)" id="">
+                <div id="couponInfo">
+                    <ul *ngFor="let str of couponText;">
+                        <li>{{str}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="bottom">
+                <div id="dropdown">
+                    <b>
+                        Address:
+                    </b>
+                    <select (change)="SetAddressIndex($event)">
+                        <option *ngFor="let el of addresses; let i = index" value="{{i}}">{{el.userAddress}}</option> 
+                    </select>    
+                </div> 
+                <div>
+                    <p>
+                        {{symbol}} {{Grand}}
+                    </p>
+                    <p>
+                        {{[itemsNum]}} Items
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <b>
+                            Cash on delivery
+                        </b>
+                    </p>
+                </div>
+                <div id="buttons">
+                    <button id="orderButton" (click)="Order()"><i class="fa-regular fa-credit-card"></i> Order</button>    
+                    <button id="trashButton" (click)="EmptyCart()"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+            </div>
+        </div>
+            
+        <div id="Tiles" (click)="UpdateTotal()">
+            <div *ngFor="let el of items" id="Tile">
+                <app-item-tile showTotal="true" itemName="{{el.item.itemName}}" itemQuantity="{{el.item.itemQuantity}}" itemPrice="{{el.item.itemPrice}}" itemImage="{{el.item.itemImage}}"></app-item-tile>
+            </div>
+        </div>        
+</div>
+
+<div id="Message" *ngIf="items.length == 0">
+    <img src="https://blinkit.com/careers/sites/default/files/2021-12/local-desktop-masthead.png" alt="">
+    <p>Seems like your cart is empty</p>
+    <p>One <b (click)="Search()">click</b> to fill it up!</p>
+</div>

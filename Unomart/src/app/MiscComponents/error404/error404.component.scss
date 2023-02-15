@@ -1,0 +1,39 @@
+.n404{
+    background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+    background-position: center;
+    height: 100vh;
+    background-color: var(--Blank);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+
+    &>div{
+        text-align: center;
+    }
+}
+.text{
+    margin-bottom:auto;
+    font-size: 12rem;
+}
+.bottom{
+    margin-bottom: 1rem;
+    align-self: baseline;
+}
+.button{
+    color: var(--Fore1);
+    font-weight: bold;
+    align-self: center;
+    max-width: 30vw;
+    font-size: 2rem;
+    background-color: var(--Green);
+    border-radius: 2rem;
+    padding: 1rem;
+    &:hover{
+        scale: 1.05;
+    }
+    &:active{
+        scale: 0.9;
+    }
+}

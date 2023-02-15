@@ -1,0 +1,18 @@
+#Message{
+    display: flex;
+    margin-top: 1rem;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+img{
+    align-self: center;
+    width: 24rem;
+}
+
+p{
+    color: var(--Fore0);
+    align-self: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+}

@@ -1,0 +1,229 @@
+#topNavBar{
+    /* overflow: hidden; */
+    background-color: var(--SteelBlue);
+    width: 100%;
+    height: 9vh;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size:22px;
+  }
+#bottomFlexBar{
+  /* overflow: hidden; */
+  background-color: var(--LightGrey);
+  width: 100%;
+  left: 0;
+  z-index: 4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size:1rem;
+  height: 91vh;
+}
+#sideNavBar{
+  overflow: hidden;
+  margin: 0;
+  /* padding: 0; */
+  background-color: var(--SteelGrey);
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: relative;
+  z-index: 3000;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+  & > div{
+    color: var(--Fore1);
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+  }  
+  
+}
+#content{
+  margin: 0;
+  /* padding-left: 1rem; */
+  /* display: grid; */
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  background: var(--LightGrey);
+  overflow: auto;
+  overflow-x: hidden;
+  flex: 1;
+}
+  
+.navItem {
+  margin: 0;
+  display: block;
+  padding: 14px 16px;
+  font-family: 'Montserrat', sans-serif;
+  
+  & > i{  
+    align-self:center;
+  }
+  & > p{
+    /* display: contents; */
+    display: block;
+    padding-left: 9px;
+    padding-right: 24px;
+  }
+}
+.navItem2{
+  margin: 0rem;
+  padding: 0rem;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  /* overflow-wrap: break-word; */
+  /* overflow-x: hidden; Hide horizontal scrollbar */
+}
+
+
+#rightAlign{
+  color: var(--Fore1);
+  /* width: 6rem; */
+  text-align: center;
+  align-self: center;
+}
+#leftAlign{
+  /* height: inherit; */
+  background-color: var(--SteelBlack);
+  color: var(--Fore1);
+  text-align: center;
+  
+}
+#leftAlignLogo{
+  padding: 0;
+    /* background-image: url(../../assets/logo.png); */
+  background-size: cover;
+  /* height: inherit; */
+  width: 27vh;
+  background-color: var(--SteelBlack);
+  
+  & > img{
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
+}
+
+#icon{
+  background-color: var(--RoseDim);
+  color: var(--Fore1);
+  border-radius: 2rem;
+  width: 3rem;
+  font-size: 1.5rem;
+  display: table-cell;
+  vertical-align: middle;
+  height: 3rem;
+}
+
+#status{
+  position:absolute;
+  transform: translate(.8rem,-0.5rem);
+  font-size: .8rem;
+  padding: .2rem;
+  border-radius: 2rem;
+  background-color: var(--Red);
+  color: var(--Fore1);
+}
+
+#search{
+  background-color: var(--MidGrey);
+  margin-right: auto;
+  display: inline-flex;
+  /* width:50%;  */
+  flex: 1;
+  text-align: left;
+  padding-left: 3%;
+  border: 0.1rem solid var(--LightGrey);
+  
+  border-end-end-radius: 0.5rem;
+  border-start-end-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
+  transition: .2s;
+
+  &:hover{
+    border-color: var(--Rose);
+    border-width: 0.2rem;
+    border-end-end-radius: 1rem;
+    border-start-end-radius: 1rem;
+      /* border-radius: 1rem; */
+  }
+  &:focus-within {
+    border-end-end-radius: 1.5rem;
+    border-start-end-radius: 1.5rem;  
+    /* border-radius: 1.5rem; */
+    border-width: 0.2rem;
+    border-color: var(--Rose);
+    box-shadow: inset 0 0 0 0.15em var(--RoseDim);
+  }
+  & >input {
+    font-size: 1.5rem;
+    display: inline-block;
+    flex: 1;
+    border: none;
+    color: var(--Fore0);  
+    background-color: var(--Trans);
+    min-width: 0.2rem;
+  }
+  & >input::placeholder {
+    color: var(--Fore2);
+  }
+  & > input:focus {
+    outline: none;
+  }
+}
+  
+
+.dropbtn {
+  background-color: var(--Trans);
+  color: var(--Blank);
+  /* margin-bottom: ; */
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: -10%;
+  background-color: var(--LightGrey);
+  min-width: 150px;
+  box-shadow: 0px 8px 16px var(--Shadow);
+  z-index: 100;    
+  
+& p {
+  text-align: left;
+  font-size: 0.9rem;
+  color: var(--Fore0);
+  padding: 12px 16px;
+  display: block;
+}
+
+& p:hover {background-color: var(--LightGrey)}
+
+}
+
+.dropdown:hover .dropdown-content {
+  display:block;
+}
+
+#load{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  // display: none;
+}

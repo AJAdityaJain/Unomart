@@ -1,0 +1,37 @@
+#orderItems{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    flex :1;
+    
+  
+  & > div> p{
+    color: var(--Fore0);
+    font-size: 2rem;
+    font-weight: bold;
+    align-self: center;
+  }
+  &>div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  }
+  
+  .back2order{
+    text-align: center;
+    width: 4rem;
+    margin: 3rem;
+    padding: .5rem;
+    border-radius: .4rem;
+    background-color: var(--Green);
+    color: #ffffff;
+    
+  &:hover{
+    scale: 1.05;
+  }
+  &:active{
+    scale: 0.9;
+  }
+  }

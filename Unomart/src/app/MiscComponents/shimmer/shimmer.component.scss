@@ -1,0 +1,58 @@
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.br {
+    border-radius: 8px;  
+  }
+  .w80 {
+     width: 60%;
+  }
+  .card {
+    background-color: var(--MidGrey);
+    border: 2px solid var(--MidGrey);
+    box-shadow:0px 0px 10px 0 var(--Shadow);
+    width: 14rem;
+    height: 23rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem;
+    overflow: hidden;
+    border-radius: .4rem;
+  }
+  .wrapper {
+    flex: 1;
+    animation: 0.5s forwards cubic-bezier(0.250, 0.460, 0.450, 0.940);//fullview
+  }
+  .img {
+    // height: 65px;
+    height: 10.8rem;
+  }
+  .comment {
+    height: 10px;
+    margin: 1rem;
+  }
+  
+  @keyframes fullView {
+    100% {
+      width: 100%;
+    }
+  }
+  
+  
+  .animate {
+     animation : shimmer 2s infinite linear;
+     background: linear-gradient(to right, var(--Grey) 4%, var(--DarkGrey) 25%, var(--Grey) 36%);
+      background-size: 1000px 100%;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }

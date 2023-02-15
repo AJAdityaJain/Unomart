@@ -1,0 +1,18 @@
+<div id="Container">
+    <img src="https://cdn-icons-png.flaticon.com/512/1261/1261126.png" alt="">
+    <div>
+        <b id="Title">{{'ORD'+OID.substr(0,12).toUpperCase()}}</b>
+        <div>
+            <p>{{Items}} Items  </p>
+            <p id="time">{{TimeText}} ago</p>
+        </div>
+        <div>
+            <p style="font-weight: bold;">Total Price : {{symbol}} {{GrandTotal}}</p>
+            <p id="discount" *ngIf="Discount!='0'">{{Discount}}% Off</p>
+        </div>
+        <div>
+            <p id="time">Delivered at <b>{{Address}}</b> with charges {{symbol}}{{DeliveryCharge}}</p>
+            <p id="button" (click)="TabParent()" >View Details > </p>
+        </div>
+    </div>
+</div>

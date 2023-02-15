@@ -1,0 +1,23 @@
+<div id="Container">
+    <!-- <div id="infoCont"> -->
+    <!-- </div> -->
+    <div *ngIf="FadeInfo" id="a">
+        <app-search-result-info (back)="FadeInfo =! FadeInfo" name="{{item?.itemName}}" quantity="{{item?.itemQuantity}}"description="{{item?.itemDescription}}" cost="{{item?.itemPrice}}" src="{{item?.itemImage}}"></app-search-result-info>
+    </div>
+
+    <div id="items" *ngIf="Query==Query2 && !FadeInfo">
+            <app-item-tile showTotal="nope" *ngFor="let el of items" (imgclick)="OpenInfo(el)" itemName="{{el.itemName}}" itemQuantity="{{el.itemQuantity}}" description="{{el.itemDescription}}" itemPrice="{{el.itemPrice}}" itemImage="{{el.itemImage}}"></app-item-tile>
+    </div>
+
+    <div *ngIf="!FadeInfo"  style="text-align:center">
+        <span *ngFor="let n of numSequence(totalPages);
+        let i = index;"class="dot" (click)="Page(i)"></span>
+    </div>
+
+    <div *ngIf="items.length == 0">
+        <div id="Message">
+            <img src="https://blinkit.com/57070263a359a92dc0fe.png" alt="">
+            <p>Nothing Here </p>
+        </div>    
+    </div>    
+</div>    

@@ -1,0 +1,8 @@
+<div>
+    <p id="Title" (click)="Search()">{{category}} <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></p>
+    <div id="Items">
+        <div *ngFor="let el of items">
+            <app-item-tile itemName="{{el.itemName}}" itemQuantity="{{el.itemQuantity}}" description="{{el.itemDescription}}" itemPrice="{{el.itemPrice}}" itemImage="{{el.itemImage}}"></app-item-tile>
+        </div>
+    </div>
+</div>

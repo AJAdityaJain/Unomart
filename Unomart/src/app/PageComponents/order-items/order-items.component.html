@@ -1,0 +1,14 @@
+<div id="orderItems">
+    <div *ngIf="orderItems.length != 0">
+        <p class="back2order" (click)="Orders()"><</p>
+        <p>{{'ORD'+OID?.substring(0,12)?.toUpperCase()}}</p>
+    </div>
+    <div *ngIf="orderItems.length == 0">
+        <app-loader></app-loader>
+    </div>
+    <div>
+        <div *ngFor="let el of orderItems">
+            <app-item-tile itemName="{{el.ItemName}}" amount="{{el.ItemAmount}}" itemPrice="{{el.ItemCost}}" itemImage="{{el.ItemImg}}" disable="true"></app-item-tile>
+        </div>
+    </div>    
+</div>

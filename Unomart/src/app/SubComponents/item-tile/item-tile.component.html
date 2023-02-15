@@ -1,0 +1,14 @@
+<div id="Container">
+    <img src="{{itemImage}}" (click)="Emit()" alt="ProductImage">
+    <div id="info">
+        <p id="Name">{{itemName}}</p>
+        <p id="Qty">{{itemQuantity}}</p>
+    </div>
+    <div id="info">
+        <p id="Price">{{symbol}} {{itemPrice}}</p>
+        <app-num-input disabled="{{disable}}" *ngIf="b==true" (Update)="SetAmount($event)" Amount="{{Amount}}"></app-num-input>
+    </div>
+    <div *ngIf="showTotal == 'true'">
+        <b>Total:</b> {{symbol}} {{Grand}}
+    </div>
+</div>

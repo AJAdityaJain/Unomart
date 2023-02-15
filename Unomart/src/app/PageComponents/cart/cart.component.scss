@@ -1,0 +1,191 @@
+#Cart{
+  display: flex;
+  flex: 1;
+  height: 91vh;
+  flex-direction: row;
+}
+#Tiles{
+
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1;
+}
+#Tile{
+  display:inline-block;
+}
+
+#Title{
+  font-size: 2rem;
+  padding-left: 1rem;
+  font-weight: bolder;
+  color: var(--Fore0);
+}
+#Text{
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  font-weight: bolder;
+  color: var(--Fore0);
+}
+
+#Side{
+  display: flex;
+  height: 100%;
+  background-color: var(--MidGrey);
+  box-shadow: -1rem 0rem 5rem var(--Shadow);
+  z-index: 100;
+  flex-direction: column;
+  max-width: 20vw;
+  
+}
+
+#top{
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  & > div{
+    align-self: center;
+  }
+}
+
+
+#orderButton, #trashButton{
+  border-radius: .3rem;
+  border: none;
+  padding: .8rem;
+  font-size: 1rem;
+  color: var(--Fore0);
+  &:hover{
+    scale: 1.05;
+  }
+
+  &:active{
+    scale: 0.9;
+  }
+}
+#orderButton{
+  background-color: var(--Green);
+  flex: 1;
+}  
+#trashButton{
+  background-color: var(--Red);
+}  
+#buttons{
+  padding: 0 1rem;
+}
+  
+
+#Message{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: var(--Fore2);
+
+  & > *{
+    font-size: 1.5rem;
+    align-self: center;
+    font-size: 2rem;
+  }
+  & > img{
+    width: 50vh;
+    margin: 1rem;
+  }
+  & > p > b{
+    color: var(--Fore0);
+  }
+}
+    
+#dropdown{
+  // padding: 0.2rem;
+  display: flex;
+  background-color: var(--Shadow);
+  align-self: flex-start;
+  flex-direction: row;
+  justify-content: left;
+  width: 100%;
+  & > *{
+    margin: .6rem;
+    padding: .2rem;
+    border-radius: .4rem;color: var(--Fore0);    
+    appearance: none;
+    width: 100%;
+    text-align: left;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  & > select{
+    background-color: var(--Grey);
+    padding: .4rem;
+    &:focus{
+      outline: none;
+    }
+    }
+  & > b{
+    width: min-content;
+  }
+}  
+
+#receipt{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+  }
+
+  &>div>p{
+    margin: 0.3rem;
+    color: var(--DarkGrey);
+    padding: 0rem 1rem;
+  }
+
+  &>#bold>p{
+    margin: 0.3rem;
+    color: var(--Fore0);
+    padding: 0rem 1rem;
+  }
+}
+
+#bottom{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0rem -.8rem 2rem -1rem var(--Shadow);
+  background-color: var(--Grey);
+  padding-bottom: 1.5rem;
+  margin-top: auto;
+  width: 100%;
+
+  &>div{
+    color: var(--Fore0);
+    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  &>div>p{
+    margin: .6rem;
+  }
+}
+
+#correct{
+  box-shadow: 0rem 0rem 0rem .2rem var(--Green) inset;
+}
+#wrong{
+  box-shadow: 0rem 0rem 0rem .2rem var(--Red) inset;
+}
+#warn{
+  box-shadow: 0rem 0rem 0rem .2rem var(--Yellow) inset;
+}
+
+#couponInfo{
+  &>ul{
+    list-style-type:square;
+    color: var(--Fore0);
+    font-size: .8rem;
+  }
+}

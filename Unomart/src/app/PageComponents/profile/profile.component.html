@@ -1,0 +1,43 @@
+<div id="flexbox">
+<div id="Container">
+    <div id="Info">
+        <form id="InfoCol">
+            <p>Currency</p>
+            <div class="dropdown">
+                <select (change)="setCurrency($event)">
+                    <option *ngFor="let el of Currencies;" value="{{el.code}}" id="{{el.code}}">{{el.symbol}} : {{el.name}}</option> 
+                </select>    
+            </div> 
+            <br><br><br>
+            <p>Name</p>
+            <input (change)="ArgError = false" type="text" name="username"  [(ngModel)]="Username" autocomplete="name" [@Shake]="ArgError">
+            <p>E-Mail</p>
+            <input (change)="ArgError = false" disabled="true" type="text" autocomplete="username" [@Shake]="ArgError" value="{{Email}}">
+            <p>Old Password</p>
+            <input (change)="ArgError = false" type="password" name="password" [(ngModel)]="OldPw" autocomplete="current-password" [@Shake]="ArgError">
+            <p>New Password</p>
+            <input (change)="ArgError = false; Check()" (click)="Check()" type="password" name="new-password" [(ngModel)]="NewPw" autocomplete="new-password" [@Shake]="ArgError">
+            <div id="meter"></div>
+            <div id="Button">
+                <div id="AddressT" class="Scalable">
+                    <p (click)="Update()">Update</p>
+                </div>
+    
+            </div>
+            <p *ngIf="ArgError">{{Message}}</p>
+        </form>
+
+        <div id="InfoCol">
+            <div id="AddressT" class="Scalable">
+                <p (click)="add()">Add another Address <i class="fa-solid fa-plus"></i></p>
+            </div>
+            <b *ngFor="let el of address">
+                <div id="Address">
+                    <div class="Scalable"  (click)="remove($event)" id="{{el.aid}}" ><i class="fa-solid fa-trash-can"></i></div>
+                    <input (change)="update($event)" id="{{el.aid}}" type="text" value="{{el.userAddress}}" placeholder="Your address goes here">
+                </div>
+            </b>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,5 @@
+<div id="Container">
+    <div *ngFor="let el of orders">
+        <app-order-tile DeliveryCharge="{{el.deliveryCharge.toString()}}" Discount="{{((1-el.discount)*100).toString()}}" Address="{{el.deliveryAddress}}" OID="{{el.oid}}" Items="{{el.items.toString()}}" Total="{{el.total.toString()}}" DateTime="{{el.dateTime}}"></app-order-tile>
+    </div>      
+</div>

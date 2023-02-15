@@ -1,0 +1,36 @@
+
+#num{
+    align-self: center;
+    font-weight: bold;
+}
+
+    
+#c{
+    margin: 0rem 1rem;
+    padding: 0.2rem;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content:space-evenly;
+    border-radius: 2rem;
+    background-color:var(--Green);
+    font-weight: bold;
+    color: var(--Fore0);
+    width: 100%;
+
+    & > p{
+        align-self: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: large;
+        display: inline;
+        margin: 0rem;
+    }
+    
+    &:hover{
+        scale: 1.05;
+    }
+    &>p:active{
+        scale: 0.9;
+    }
+}

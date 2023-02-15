@@ -1,0 +1,69 @@
+<div id="topNavBar">
+    <div class="navItem" id="leftAlign" (click) ="Expand=!Expand;" [@Expand]="Expand"><i class="fa-solid fa-list-ul"></i></div>
+    <div class="navItem" id="leftAlignLogo" (click)="Home()"> <img src="../../assets/logo.png" alt="logo" ></div>
+    <div class="navItem" id="search"  (keyup)="Search($event, false)"(click)="Search($event, true)" (focusout) ="Search($event, true)"> 
+        <i class="fa-solid fa-magnifying-glass"></i>
+        &nbsp; 
+    <input type="text" placeholder="Search" [(ngModel)]="Query" id="SearchBar" autocomplete="off"></div>
+    <div class="navItem" id="rightAlign" (click)="Cart()">
+        <i class="fa-solid fa-cart-plus" ><div *ngIf="Status() != ''" id="status">{{Status()}}</div>
+        </i> Cart 
+    </div>
+    <div class="navItem" id="rightAlign" >
+        <div class="dropdown">
+            <div id="icon" class="dropbtn">
+                ?
+            </div>
+            <div class="dropdown-content">
+                <p (click)="Profile()"><i class="fa-solid fa-pen-to-square"></i> &nbsp; Profile</p>
+                <p (click)="Logout()"><i class="fa-solid fa-right-from-bracket"></i> &nbsp; Log Out</p>
+                <p (click)="Theme()" id="" class="Theme"><i class="fa-solid fa-paint-roller"></i>&nbsp; <span id="Theme">Theme</span></p>                
+            </div>
+          </div>
+    </div>
+</div>                    
+<div id="bottomFlexBar">
+    <div class="navItem2" id="leftAlign" mouse (mousewheel) ="Expand=!Expand;">
+        <div id="sideNavBar" class="navItem" [@Expand]="Expand">
+            <div class="navItem" (click)="Home()">
+                <p><i class="fa-solid fa-house-chimney"></i></p>
+                <p>Home</p>
+            </div>
+            <div class="navItem" (click)="Search(undefined, true)">
+                <p><i class="fa-solid fa-magnifying-glass"></i> </p>
+                <p>Search</p>
+            </div>
+            <div class="navItem" (click)="Cart()">
+                <p><i class="fa-solid fa-cart-plus"></i></p>
+                <p>Cart</p>
+            </div>
+            <div class="navItem" (click)="Orders()">
+                <p><i class="fa-solid fa-basket-shopping"></i> </p>
+                <p>Orders</p>
+            </div>
+            <div class="navItem" (click)="About()">
+                <P><i class="fa-regular fa-circle-question"></i> </P>
+                <p>About</p>
+            </div>
+        </div>                    
+    </div>
+    <div id="content">
+        <div [hidden]="Shimmer">
+            <router-outlet style="height: 0px;"></router-outlet>
+        </div>
+        <div id="load" [hidden]="!Shimmer">
+            <app-shimmer></app-shimmer>
+            <app-shimmer></app-shimmer>    
+            <app-shimmer></app-shimmer>
+            <app-shimmer></app-shimmer>    
+            <app-shimmer></app-shimmer>
+            <app-shimmer></app-shimmer>    
+            <app-shimmer></app-shimmer>
+            <app-shimmer></app-shimmer>    
+            <app-shimmer></app-shimmer>
+            <app-shimmer></app-shimmer>    
+            <app-shimmer></app-shimmer>
+            <app-shimmer></app-shimmer>    
+        </div>
+    </div>
+</div>  

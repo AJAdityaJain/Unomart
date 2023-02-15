@@ -1,0 +1,14 @@
+#Items{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+#Title{
+    color: var(--Fore0);
+    font-size: 2rem;
+    margin-bottom: .5rem;
+    font-weight: bolder;
+    padding-left: 2rem;
+
+}

@@ -1,0 +1,93 @@
+#Centre{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#Container{
+    color: var(--Fore0);
+    background: var(--MidGrey);
+    box-shadow: var(--Shadow) 0.2rem 0.2rem 1rem;
+    width: 52rem;
+    height: 36rem;
+    border-radius: .4rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem;
+    
+& > img{
+    /* flex: 1; */
+    height: 100%;
+    object-fit:cover;
+    width: 27rem;
+    display: block;
+    align-self: center;
+    border-right: 0.4rem solid var(--Rose);
+}
+& > div{
+    flex: 1;
+    overflow:auto;
+    display: flex;
+    flex-direction: column;
+}
+}
+.bottom{
+    margin-top: auto;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content:center; 
+}
+
+
+#back2search{
+    margin: 1rem;
+    border-radius: 0.3rem;
+    background-color:var(--Green);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--Fore0);
+    width: 4rem;
+    height: 2.5rem;
+    
+&:hover{
+    scale: 1.05;
+}
+&:active{
+    scale: 0.9;
+}
+}
+
+
+
+#Price{
+    font-family: 'Montserrat', sans-serif;
+    font-size:1.5rem;
+    color: var(--Fore0);
+    display: block;
+    margin-left: 1rem;
+    align-self: center;
+}
+
+#Name{
+    font-family: 'Montserrat', sans-serif;
+    font-size:4rem;
+    display: block;
+    margin: 1rem;
+    align-self: center;
+}
+#Qty{
+    font-family: 'Montserrat', sans-serif;
+    font-size:1.3rem;
+    color: var(--Fore2);
+    display: block;
+    margin-left: 0.7rem;
+    align-self: center;
+}
+#Desc{
+    text-align: left;
+    padding: 1rem;
+}

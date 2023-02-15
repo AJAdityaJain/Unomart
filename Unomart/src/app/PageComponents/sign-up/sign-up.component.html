@@ -1,0 +1,38 @@
+<div id="outflex" *ngIf="Show">
+<div id="container">
+    <div id="base">
+        <div id="left" [@SlideRight]="!SlideState">
+            <form class="form" id="f2" method="Get">
+                <p id="right-Head">Welcome Back!</p>
+                <input type="text"    (change)="ArgError = false" [(ngModel)]="Email"    [@Shake]="ArgError"  name="email" autocomplete="username" placeholder="E-Mail ID">            
+                <input type="password"(change)="ArgError = false" [(ngModel)]="UserPW"   [@Shake]="ArgError"  name="password" autocomplete="current-password" placeholder="Password" >            
+                <button type="submit" (click)="SignIn()">Sign In</button>
+            </form>
+            <br>
+            <p class="ErrorMessage" *ngIf="ArgError">{{ErrorMessage}}</p>
+        </div>
+        
+        <div id="right" [@SlideLeft]="SlideState">
+            <form class="form" method="post">
+                <p id="right-Head">Join us for free!</p>
+                <input type="text"    (change)="ArgError = false" [(ngModel)]="UserName" [@Shake]="ArgError"  name="username" autocomplete="name" placeholder="User Name">            
+                <input type="text"    (change)="ArgError = false" [(ngModel)]="Email"    [@Shake]="ArgError"  name="email" autocomplete="username" placeholder="E-Mail ID">            
+                <input type="password" (click)="Check()" (change)="ArgError = false;Check()" [(ngModel)]="UserPW"   [@Shake]="ArgError"  name="password" autocomplete="new-password" placeholder="Password" >            
+                <div id="meter"></div>
+                <input type="text"    (change)="ArgError = false" [(ngModel)]="Address"    [@Shake]="ArgError"  name="Address" autocomplete="address-line3" placeholder="Address">            
+                <button type="submit" (click)="SignUp()">Sign Up</button>
+            </form>
+            <p class="ErrorMessage" *ngIf="ArgError">{{ErrorMessage}}</p>               
+        </div>
+    </div>
+    <div id="overlay">
+        <div>
+            <button (click)="Slide()" [@SlideRight]="SlideState">Sign In</button>
+        </div>
+        <div>
+            <button (click)="Slide()" [@SlideLeft]="!SlideState">Sign Up</button>
+        </div>
+    </div>
+    
+</div>
+</div>

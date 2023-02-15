@@ -1,0 +1,159 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+
+:root{
+    --Fore0 : #272736;
+    --Fore1 : #FFFFFF;        
+    --Fore2 : #5c5c6c;
+
+    --LightGrey:#e6e6ee;
+    --MidGrey:#e2e2e8;
+    --Grey:#b4b5bf;
+    --DarkGrey:#8a8b8f;
+
+    --SteelBlue : #3A3784;
+    --SteelGrey : #2F2F54;
+    --SteelBlack : #272736;
+
+    --Red : #c74949;
+    --Yellow : #d5c035;
+    --Green : #35ba35;
+
+    --Rose : #FF0080;
+    --RoseDim : #a95880;
+
+    --Blank : #FFFFFF;
+    --Shadow: #7F7F7F;
+    --Dark: #000000;
+
+    --Trans : #00000000;
+
+    &:has(#dark){
+        --Fore0 : #e3e3e6;
+        --Fore1 : #FFFFFF;
+        --Fore2 : #9696b4;
+
+        --LightGrey:#35363c;
+        --MidGrey:#484a58;
+        --Grey:#747683;
+        --DarkGrey:#acacc0;
+    
+        --SteelBlue : #3A3784;
+        --SteelGrey : #2F2F54;
+        --SteelBlack : #272736;
+    
+        --Red : #cc2f2f;    
+        --Yellow : #d8bc03;
+        --Green : #069f06;
+    
+        --Rose : #FF0080;
+        --RoseDim : #a95880;
+    
+        --Blank : #000000;
+        --Shadow: #454147;
+        --Dark: #FFFFFF;
+    
+        --Trans : #ffffff00;
+        
+    }
+    
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--Shadow); 
+    border-radius: 10px;
+    background-color: var(--MidGrey);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--Grey); 
+    border-radius: 10px;
+}
+
+[hidden] { display: none !important;}
+
+body{
+    overflow: hidden;
+    margin:0px;
+    padding: 0px;
+    background-color: var(--LightGrey);
+}
+html{
+    margin: 0px;
+    padding: 0px;
+}
+
+*{    font-family: 
+    'Montserrat' ,serif;
+    transition: .2s;
+    user-select: none;
+}
+
+
+
+
+input{
+    width: 70%;
+    background : var(--LightGrey);
+    color: var(--Fore0);
+    align-self: center;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    
+    &:focus{
+        outline: none;
+    }
+}
+
+
+#meter{
+    margin-top: 0rem;
+    margin-bottom: 0.5rem;
+    margin-left: .75rem;
+    align-self: center;
+    max-width: 60%;
+    width: 0%;
+    padding: 0.1rem;
+    background-color: maroon;
+}
+
+
+
+
+
+
+
+
+
+
+
+// $LightGrey:#EEEEEE;
+//     $Grey:#C1C1C1;
+//     $DarkGrey:#858189;
+
+//     $SteelBlue : #3A3784;
+//     $SteelGrey : #2F2F54;
+//     $SteelBlack : #272736;
+
+//     $Red : #cc2f2f;
+
+//     $Rose : #FF0080;
+//     $RoseDim : #a95880;
+
+//     $Blank : #FFFFFF;
+//     $Shadow: #7F7F7F;
+//     $Dark: #000000;
+
+//     $Trans : #ffffff00;

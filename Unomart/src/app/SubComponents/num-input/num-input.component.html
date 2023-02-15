@@ -1,0 +1,13 @@
+
+<div id="c" *ngIf="amount==0&&!disable" (click)="ChangeAmount(1)">
+    <p>Add</p>        
+</div>
+
+<div id="c" *ngIf="amount!=0&&!disable">
+    <p (click)="ChangeAmount(-1)"><i class="fa-solid fa-minus"></i></p>    
+    <p id="num">{{amount}}</p>
+    <p (click)="ChangeAmount(1)"><i class="fa-solid fa-plus"></i></p>    
+</div>
+<div id="c" *ngIf="disable">
+    <p id="num">{{amount}}</p>
+</div>
